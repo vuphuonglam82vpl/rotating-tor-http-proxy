@@ -69,7 +69,7 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
           push: true
-          tags: zhaowde/rotating-tor-http-proxy:latest,zhaowde/rotating-tor-http-proxy:${{ steps.tag_version_dryrun.outputs.new_version }}
+          tags: hoahong82hh/rotating-tor-http-proxy:latest,hoahong82hh/rotating-tor-http-proxy:${{ steps.tag_version_dryrun.outputs.new_version }}
 
       - name: Commit changes
         if: ${{ success() && steps.compare-bom.outputs.compare-bom-result == 'CHANGED' }}
@@ -111,5 +111,5 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-          repository: zhaowde/rotating-tor-http-proxy
+          repository: hoahong82hh/rotating-tor-http-proxy
           short-description: ${{ github.event.repository.description }}
