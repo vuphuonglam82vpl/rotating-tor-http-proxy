@@ -1,14 +1,14 @@
-![GitHub](https://img.shields.io/github/license/zhaow-de/rotating-tor-http-proxy)
-![Docker Image Version (latest semver)](https://img.shields.io/docker/v/zhaowde/rotating-tor-http-proxy?sort=semver)
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/zhaow-de/rotating-tor-http-proxy/auto-upgrade.yml)
-[![Docker Pulls](https://img.shields.io/docker/pulls/zhaowde/rotating-tor-http-proxy.svg)](https://hub.docker.com/r/zhaowde/rotating-tor-http-proxy/)
-![Docker Image Size (latest semver)](https://img.shields.io/docker/image-size/zhaowde/rotating-tor-http-proxy?sort=semver)
+![GitHub](https://img.shields.io/github/license/vuphuonglam82vpl/rotating-tor-http-proxy)
+![Docker Image Version (latest semver)](https://img.shields.io/docker/v/vuphuonglam82vpl/rotating-tor-http-proxy?sort=semver)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/vuphuonglam82vpl/rotating-tor-http-proxy/auto-upgrade.yml)
+[![Docker Pulls](https://img.shields.io/docker/pulls/vuphuonglam82vpl/rotating-tor-http-proxy.svg)](https://hub.docker.com/r/vuphuonglam82vpl/rotating-tor-http-proxy/)
+![Docker Image Size (latest semver)](https://img.shields.io/docker/image-size/vuphuonglam82vpl/rotating-tor-http-proxy?sort=semver)
 
 # rotating-tor-http-proxy
 
 This Docker image provides one HTTP proxy endpoint with many IP addresses for use scenarios like web crawling.
 
-![Screenshot](https://raw.githubusercontent.com/zhaow-de/rotating-tor-http-proxy/main/images/screenshot_1.gif)
+![Screenshot](https://raw.githubusercontent.com/vuphuonglam82vpl/rotating-tor-http-proxy/main/images/screenshot_1.gif)
 
 Behind the scene, it has an HAProxy sitting in front of multiple pairs of Privoxy-Tor. The HAProxy dispatches the incoming
 requests to the Privoxy instances with a round-robin strategy. 
@@ -23,14 +23,14 @@ This image is multi-platform enabled, currently supporting:
 
 ### Simple case
 ```shell
-docker run --rm -it -p 3128:3128 zhaowde/rotating-tor-http-proxy
+docker run --rm -it -p 3128:3128 hoahong82hh/rotating-tor-http-proxy
 ```
 At the host, `127.0.0.1:3128` is the HTTP/HTTPS proxy address.
 
 ### Moreover
 
 ```shell
-docker run --rm -it -p 3128:3128 -p 4444:4444 -e "TOR_INSTANCES=5" -e "TOR_REBUILD_INTERVAL=3600" zhaowde/rotating-tor-http-proxy
+docker run --rm -it -p 3128:3128 -p 4444:4444 -e "TOR_INSTANCES=5" -e "TOR_REBUILD_INTERVAL=3600" hoahong82hh/rotating-tor-http-proxy
 ```
 
 Port `4444/TCP` can be mapped to the host if HAProxy stats information is needed. With `docker run -p 4444:4444`, the HAProxy statistics
