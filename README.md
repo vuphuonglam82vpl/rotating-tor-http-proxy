@@ -1,8 +1,8 @@
 ![GitHub](https://img.shields.io/github/license/vuphuonglam82vpl/rotating-tor-http-proxy)
 ![Docker Image Version (latest semver)](https://img.shields.io/docker/v/vuphuonglam82vpl/rotating-tor-http-proxy?sort=semver)
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/vuphuonglam82vpl/rotating-tor-http-proxy/auto-upgrade.yml)
-[![Docker Pulls](https://img.shields.io/docker/pulls/vuphuonglam82vpl/rotating-tor-http-proxy.svg)](https://hub.docker.com/r/hoahong82hh/rotating-tor-http-proxy/)
-![Docker Image Size (latest semver)](https://img.shields.io/docker/image-size/vuphuonglam82vpl/rotating-tor-http-proxy?sort=semver)
+[![Docker Pulls](https://img.shields.io/docker/pulls/hoahong82hh/rotating-tor-http-proxy.svg)](https://hub.docker.com/r/hoahong82hh/rotating-tor-http-proxy/)
+![Docker Image Size (latest semver)](https://img.shields.io/docker/image-size/hoahong82hh/rotating-tor-http-proxy?sort=semver)
 
 # rotating-tor-http-proxy
 
